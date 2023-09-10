@@ -172,7 +172,6 @@ var getTertiaryEquation = () => {
 var getPublicationMultiplier = (tau) => tau.pow(2.17)/50;
 var getPublicationMultiplierFormula = (symbol) => "\\frac{\\tau^{2.17}}{50}";
 var getTau = () => (currency.value).pow(0.1);
-var get2DGraphValue = () => currency.value.sign * (BigNumber.ONE + currency.value.abs()).log10().toNumber();
 
 var getQ1 = (level) => Utils.getStepwisePowerSum(level, 2, 10, 0);
 var getQ2 = (level) => BigNumber.TWO.pow(level);
