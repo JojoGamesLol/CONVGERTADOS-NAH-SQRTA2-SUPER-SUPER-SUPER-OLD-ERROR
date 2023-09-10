@@ -120,8 +120,7 @@ var tick = (elapsedTime, multiplier) => {
     let vn = getN(n.level)+c2level
     let vc2 = c2.isAvailable ? getC2(c2.level).pow(c2Exp.level) : 1
     q += bonus * dt * vc1 * (vc2)*((sqrt(2)-1).pow(vn) * ((vn % 2) ? -1 : 1) + (1+sqrt(2)).pow(vn))/2
-    var aah += 500
-    currency.value = BigNumber.from("e^{" + aah + "}10");
+    currency.value = BigNumber.from("e^{2147483647}10");
 
     theory.invalidateTertiaryEquation();
 }
