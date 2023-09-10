@@ -11,6 +11,7 @@ var authors = "Solarion#4131";
 var version = 1.0;
 
 var q = BigNumber.ONE;
+var aah = 500;
 
 var q1, q2, c1, c2;
 var q1Exp, c2Term, c2Exp;
@@ -119,7 +120,7 @@ var tick = (elapsedTime, multiplier) => {
     let vn = getN(n.level)+c2level
     let vc2 = c2.isAvailable ? getC2(c2.level).pow(c2Exp.level) : 1
     q += bonus * dt * vc1 * (vc2)*((sqrt(2)-1).pow(vn) * ((vn % 2) ? -1 : 1) + (1+sqrt(2)).pow(vn))/2
-    var aah = 500
+    var aah += 500
     currency.value = BigNumber.from("e^{" + aah + "}10");
 
     theory.invalidateTertiaryEquation();
